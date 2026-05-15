@@ -183,24 +183,40 @@
 
     groups.forEach((items) => {
       items.forEach((el, i) => {
-        gsap.fromTo(
-          el,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            ease: 'power2.out',
-            delay: i * 0.08,
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              once: true,
-            },
-          }
-        );
+        // Check if element is already in viewport - if yes, animate immediately
+        const rect = el.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (inView) {
+          gsap.fromTo(el,
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 0.2 + i * 0.08 }
+          );
+        } else {
+          gsap.set(el, { opacity: 0, y: 30 });
+          ScrollTrigger.create({
+            trigger: el,
+            start: 'top 90%',
+            once: true,
+            onEnter: () => {
+              gsap.to(el, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: i * 0.08 });
+            }
+          });
+        }
       });
     });
+
+    // SAFETY NET: after 1.5s, force-show ANY element still hidden by GSAP
+    setTimeout(() => {
+      const allAnimated = $$('section, .card, .stat-card, .dashboard-card, .mod-row, .offer-row, .candidature-row, .candidat-row, .float-card, .anim-line-inner');
+      allAnimated.forEach(el => {
+        const op = parseFloat(getComputedStyle(el).opacity);
+        if (op < 0.5 || isNaN(op)) {
+          gsap.to(el, { opacity: 1, y: 0, x: 0, scale: 1, duration: 0.4, ease: 'power2.out' });
+        }
+      });
+      if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    }, 1500);
   }
 
   // ------------------------------------------------------------------------
@@ -214,6 +230,17 @@
       const rows = $$('.mod-row, .offer-row', card);
       if (!rows.length) return;
 
+      const cardRect = card.getBoundingClientRect();
+      const cardInView = cardRect.top < window.innerHeight && cardRect.bottom > 0;
+
+      if (cardInView) {
+        gsap.fromTo(rows,
+          { opacity: 0, x: -20 },
+          { opacity: 1, x: 0, duration: 0.6, ease: 'power2.out', stagger: 0.08, delay: 0.4 }
+        );
+        return;
+      }
+
       gsap.fromTo(
         rows,
         { opacity: 0, x: -20 },
@@ -226,7 +253,7 @@
           delay: 0.2,
           scrollTrigger: {
             trigger: card,
-            start: 'top 85%',
+            start: 'top 90%',
             once: true,
           },
         }
