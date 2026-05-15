@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tableau de Bord — Modénation</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt=""><span>Modénation</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="moderateurs.html">Modérateurs</a>
+      <a href="offres.html">Offres de Recrutement</a>
+      <a href="dashboard.html" class="active">Tableau de Bord</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a href="login.html" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Se Connecter</a>
+  </div>
+</header>
+
+<div class="container page-head">
+  <div style="display:flex; align-items:center; gap:16px;">
+    <img src="https://i.pravatar.cc/180?img=32" alt="" style="width:64px; height:64px; border-radius:14px; object-fit:cover;"/>
+    <div>
+      <h1 style="font-size:26px;">Bienvenue, <span class="accent">AliceMod</span> 👋</h1>
+      <p class="sub" style="margin-top:4px;">Voici l'état de votre activité sur Modénation.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Stats strip -->
+  <div class="stats-strip" style="margin-top: 0;">
+    <div class="stat-tile">
+      <div class="ic"><i class="bi bi-bar-chart-fill"></i></div>
+      <div style="flex:1;">
+        <div class="val">XP: 345 <span style="color:var(--text-dim); font-weight:500; font-size:13px;">/ 500 · Niveau 4</span></div>
+        <div class="xp-bar"><span style="width:69%"></span></div>
+      </div>
+    </div>
+    <div class="stat-tile">
+      <div class="ic" style="color:#facc15"><i class="bi bi-star-fill"></i></div>
+      <div>
+        <div class="lbl">Avis Reçus</div>
+        <div class="val">4.8 / 5</div>
+      </div>
+    </div>
+    <div class="stat-tile">
+      <div class="ic" style="color:#f87171"><i class="bi bi-flag-fill"></i></div>
+      <div>
+        <div class="lbl">Signalements</div>
+        <div class="val">2 <span style="color:var(--text-dim); font-weight:500; font-size:13px;">en cours</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top:22px;">
+    <!-- Mes candidatures -->
+    <div class="card">
+      <div class="section-title">
+        <h2><i class="bi bi-file-earmark-text ic"></i> Mes Candidatures</h2>
+        <a href="offres.html" class="link">Toutes →</a>
+      </div>
+      <div class="candidature-row">
+        <div class="candidature-icon" style="background:linear-gradient(135deg,#8b5cf6,#a855f7);"><i class="bi bi-discord"></i></div>
+        <div class="candidature-body">
+          <div class="candidature-title">Serveur RP Discord</div>
+          <div class="candidature-sub">Envoyée il y a 3 jours</div>
+        </div>
+        <span class="badge badge-pending">En Attente</span>
+      </div>
+      <div class="candidature-row">
+        <div class="candidature-icon" style="background:linear-gradient(135deg,#06b6d4,#3b82f6);"><i class="bi bi-controller"></i></div>
+        <div class="candidature-body">
+          <div class="candidature-title">GamerZone</div>
+          <div class="candidature-sub">Acceptée hier — Bienvenue dans l'équipe !</div>
+        </div>
+        <span class="badge badge-accepted">Accepté</span>
+      </div>
+      <div class="candidature-row">
+        <div class="candidature-icon" style="background:linear-gradient(135deg,#ef4444,#f97316);"><i class="bi bi-youtube"></i></div>
+        <div class="candidature-body">
+          <div class="candidature-title">Team YouTube TechTalk</div>
+          <div class="candidature-sub">Refusée — Profil trop junior</div>
+        </div>
+        <span class="badge badge-refused">Refusé</span>
+      </div>
+    </div>
+
+    <!-- Candidats reçus -->
+    <div class="card">
+      <div class="section-title">
+        <h2><i class="bi bi-people-fill ic"></i> Candidats Reçus</h2>
+        <a href="offres.html" class="link">Gérer →</a>
+      </div>
+      <div class="candidat-row">
+        <img class="candidat-avatar" src="https://i.pravatar.cc/100?img=32" alt="" style="object-fit:cover;"/>
+        <div class="candidat-body">
+          <div class="candidat-name">AliceMod <span class="verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="candidat-sub">★ 4.8 — 2 ans d'expérience</div>
+        </div>
+        <span class="badge badge-progress">En Cours</span>
+      </div>
+      <div class="candidat-row">
+        <img class="candidat-avatar" src="https://i.pravatar.cc/100?img=12" alt="" style="object-fit:cover;"/>
+        <div class="candidat-body">
+          <div class="candidat-name">JayTheMod <span class="verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="candidat-sub">★ 4.2 — Spécialiste Twitch</div>
+        </div>
+        <span class="badge badge-refused">Refusé</span>
+      </div>
+      <div class="candidat-row">
+        <img class="candidat-avatar" src="https://i.pravatar.cc/100?img=53" alt="" style="object-fit:cover;"/>
+        <div class="candidat-body">
+          <div class="candidat-name">ZenMod <span class="verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="candidat-sub">★ 4.9 — Niveau 9</div>
+        </div>
+        <span class="badge badge-accepted">Accepté</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- XP progression + retours d'expérience -->
+  <div class="two-col" style="margin-top:22px;">
+    <div class="card">
+      <div class="section-title">
+        <h2><i class="bi bi-graph-up ic"></i> Progression XP</h2>
+      </div>
+      <div style="padding:10px;">
+        <div style="font-size:13px; color:var(--text-dim); margin-bottom:8px;">Niveau actuel : 4 — Modérateur Confirmé</div>
+        <div class="xp-bar" style="height:12px; background:rgba(255,255,255,.06);"><span style="width:69%; display:block; height:100%; background:var(--grad-main); border-radius:99px;"></span></div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-dim); margin-top:8px;">
+          <span>345 XP</span><span>155 XP avant niveau 5</span>
+        </div>
+
+        <div style="margin-top:24px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+          <div class="card" style="padding:14px; text-align:center;">
+            <i class="bi bi-shield-fill-check" style="color:#22c55e; font-size:22px;"></i>
+            <div style="font-weight:700; margin-top:4px;">12</div>
+            <div style="color:var(--text-dim); font-size:12px;">Missions</div>
+          </div>
+          <div class="card" style="padding:14px; text-align:center;">
+            <i class="bi bi-clock-history" style="color:#38bdf8; font-size:22px;"></i>
+            <div style="font-weight:700; margin-top:4px;">186 h</div>
+            <div style="color:var(--text-dim); font-size:12px;">Modération</div>
+          </div>
+          <div class="card" style="padding:14px; text-align:center;">
+            <i class="bi bi-award-fill" style="color:#facc15; font-size:22px;"></i>
+            <div style="font-weight:700; margin-top:4px;">5</div>
+            <div style="color:var(--text-dim); font-size:12px;">Badges</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">
+        <h2><i class="bi bi-chat-square-quote-fill ic"></i> Retours d'expérience</h2>
+        <a href="#" class="link">Tous les avis →</a>
+      </div>
+      <div class="candidature-row" style="align-items:flex-start;">
+        <div class="candidat-avatar" style="background:linear-gradient(135deg,#06b6d4,#3b82f6);">RP</div>
+        <div class="candidature-body">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="candidature-title">RP Nation</div>
+            <span class="stars" style="color:var(--amber); letter-spacing:1.5px; font-size:12px;">★ ★ ★ ★ ★</span>
+          </div>
+          <div class="candidature-sub" style="margin-top:6px;">« Excellent modérateur, réactif et professionnel. À recommander ! »</div>
+        </div>
+      </div>
+      <div class="candidature-row" style="align-items:flex-start;">
+        <div class="candidat-avatar" style="background:linear-gradient(135deg,#f97316,#fbbf24);">GZ</div>
+        <div class="candidature-body">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="candidature-title">GamerZone</div>
+            <span class="stars" style="color:var(--amber); letter-spacing:1.5px; font-size:12px;">★ ★ ★ ★ ☆</span>
+          </div>
+          <div class="candidature-sub" style="margin-top:6px;">« Très bonne gestion des conflits. Communique bien avec l'équipe. »</div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block mt-14" onclick="openModal('add-review')"><i class="bi bi-pencil-square"></i> Laisser un avis</button>
+    </div>
+  </div>
+
+  <!-- Signalements -->
+  <div class="card" style="margin-top:22px;">
+    <div class="section-title">
+      <h2><i class="bi bi-flag-fill ic" style="color:#f87171;"></i> Signalements en cours</h2>
+      <a href="signalement.html" class="link">Tout l'historique →</a>
+    </div>
+    <div class="candidature-row">
+      <div class="candidature-icon" style="background:rgba(239,68,68,.2); color:#f87171;"><i class="bi bi-exclamation-triangle"></i></div>
+      <div class="candidature-body">
+        <div class="candidature-title">Signalement #1284 — Comportement inapproprié</div>
+        <div class="candidature-sub">Ouvert il y a 2 jours · Recruteur "FakeAccount"</div>
+      </div>
+      <span class="badge badge-progress">En examen</span>
+    </div>
+    <div class="candidature-row">
+      <div class="candidature-icon" style="background:rgba(239,68,68,.2); color:#f87171;"><i class="bi bi-shield-exclamation"></i></div>
+      <div class="candidature-body">
+        <div class="candidature-title">Signalement #1290 — Offre suspecte</div>
+        <div class="candidature-sub">Ouvert il y a 5 heures · Offre "ModInstant5€"</div>
+      </div>
+      <span class="badge badge-pending">En attente</span>
+    </div>
+    <button class="btn btn-danger btn-block mt-14" onclick="openModal('report')"><i class="bi bi-flag"></i> Signaler un nouveau problème</button>
+  </div>
+</div>
+
+<!-- Modal: signalement -->
+<div class="modal-overlay" id="report">
+  <div class="modal">
+    <h3><i class="bi bi-flag-fill" style="color:#f87171;"></i> Signaler un problème</h3>
+    <p class="sub">Décrivez le problème rencontré. Notre équipe traitera votre signalement sous 48h.</p>
+    <form data-fake="Signalement envoyé. Merci de votre vigilance !" data-close-modal="report" data-reset="true">
+      <div class="form-group">
+        <label>Type de signalement</label>
+        <select class="select">
+          <option>Comportement inapproprié</option>
+          <option>Arnaque / offre suspecte</option>
+          <option>Faux profil</option>
+          <option>Harcèlement</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Utilisateur / offre concerné</label>
+        <input class="input" placeholder="Ex: @username ou ID de l'offre">
+      </div>
+      <div class="form-group">
+        <label>Description détaillée</label>
+        <textarea class="textarea" placeholder="Expliquez ce qui s'est passé..." required></textarea>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('report')">Annuler</button>
+        <button type="submit" class="btn btn-danger"><i class="bi bi-send"></i> Envoyer le signalement</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal: avis -->
+<div class="modal-overlay" id="add-review">
+  <div class="modal">
+    <h3>Laisser un avis</h3>
+    <p class="sub">Votre retour aide la communauté à mieux choisir.</p>
+    <form data-fake="Merci pour votre avis !" data-close-modal="add-review" data-reset="true">
+      <div class="form-group">
+        <label>Note</label>
+        <select class="select"><option>★★★★★ (5/5)</option><option>★★★★☆ (4/5)</option><option>★★★☆☆ (3/5)</option><option>★★☆☆☆ (2/5)</option><option>★☆☆☆☆ (1/5)</option></select>
+      </div>
+      <div class="form-group">
+        <label>Votre commentaire</label>
+        <textarea class="textarea" placeholder="Comment s'est passée votre collaboration ?" required></textarea>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('add-review')">Annuler</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-check2"></i> Publier l'avis</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer style="margin-top:60px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Fonctionnalités</h4><a href="moderateurs.html">Modérateurs</a><a href="offres.html">Offres</a><a href="dashboard.html">Tableau de bord</a><a href="signalement.html">Signalements</a></div>
+      <div class="footer-col"><h4>À Propos</h4><a href="apropos.html">Équipe</a><a href="apropos.html#mission">Mission</a><a href="blog.html">Blog</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="contact.html#faq">FAQ</a><a href="contact.html#community">Communauté</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a><a href="mentions.html#cgu">CGU</a></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-socials"><a href="#"><i class="bi bi-discord"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-twitch"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
+      <div>© 2026 Modénation. Tous droits réservés.</div>
+      <div class="footer-bottom-links"><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Signalements — Modénation</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt=""><span>Modénation</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="moderateurs.html">Modérateurs</a>
+      <a href="offres.html">Offres de Recrutement</a>
+      <a href="dashboard.html">Tableau de Bord</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a href="login.html" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Se Connecter</a>
+  </div>
+</header>
+
+<div class="container page-head">
+  <h1>Centre de <span style="background:var(--grad-main);-webkit-background-clip:text;background-clip:text;color:transparent;">Signalements</span></h1>
+  <p class="sub">Garde la communauté saine. Tout est traité sous 48h par notre équipe modération.</p>
+</div>
+
+<div class="container">
+
+  <div class="stats-strip" style="margin-top:0; grid-template-columns:repeat(4,1fr);">
+    <div class="stat-tile"><div class="ic" style="color:#f87171"><i class="bi bi-flag-fill"></i></div><div><div class="lbl">Signalements actifs</div><div class="val">2</div></div></div>
+    <div class="stat-tile"><div class="ic" style="color:#22c55e"><i class="bi bi-check-circle-fill"></i></div><div><div class="lbl">Résolus</div><div class="val">14</div></div></div>
+    <div class="stat-tile"><div class="ic" style="color:#fbbf24"><i class="bi bi-hourglass-split"></i></div><div><div class="lbl">En examen</div><div class="val">3</div></div></div>
+    <div class="stat-tile"><div class="ic"><i class="bi bi-shield-check"></i></div><div><div class="lbl">Score communauté</div><div class="val">98%</div></div></div>
+  </div>
+
+  <div class="two-col mt-20">
+    <!-- Liste -->
+    <div class="card">
+      <div class="section-title">
+        <h2><i class="bi bi-list-task ic"></i> Mes signalements</h2>
+        <button class="btn btn-danger" onclick="openModal('report')"><i class="bi bi-flag"></i> Nouveau</button>
+      </div>
+
+      <div class="candidature-row">
+        <div class="candidature-icon" style="background:rgba(239,68,68,.2); color:#f87171;"><i class="bi bi-exclamation-triangle"></i></div>
+        <div class="candidature-body">
+          <div class="candidature-title">#1284 — Comportement inapproprié</div>
+          <div class="candidature-sub">Ouvert il y a 2 jours · Cible : FakeAccount</div>
+        </div>
+        <span class="badge badge-progress">En examen</span>
+      </div>
+
+      <div class="candidature-row">
+        <div class="candidature-icon" style="background:rgba(239,68,68,.2); color:#f87171;"><i class="bi bi-shield-exclamation"></i></div>
+        <div class="candidature-body">
+          <div class="candidature-title">#1290 — Offre suspecte</div>
+          <div class="candidature-sub">Ouvert il y a 5h · Offre "ModInstant5€"</div>
+        </div>
+        <span class="badge badge-pending">En attente</span>
+      </div>
+
+      <div class="candidature-row">
+        <div class="candidature-icon" style="background:rgba(34,197,94,.2); color:#4ade80;"><i class="bi bi-check2-circle"></i></div>
+        <div class="candidature-body">
+          <div class="candidature-title">#1201 — Faux profil</div>
+          <div class="candidature-sub">Résolu il y a 1 semaine · Compte supprimé</div>
+        </div>
+        <span class="badge badge-accepted">Résolu</span>
+      </div>
+
+      <div class="candidature-row">
+        <div class="candidature-icon" style="background:rgba(34,197,94,.2); color:#4ade80;"><i class="bi bi-check2-circle"></i></div>
+        <div class="candidature-body">
+          <div class="candidature-title">#1199 — Spam dans les messages</div>
+          <div class="candidature-sub">Résolu il y a 2 semaines · Avertissement</div>
+        </div>
+        <span class="badge badge-accepted">Résolu</span>
+      </div>
+    </div>
+
+    <!-- Charte / aide -->
+    <div>
+      <div class="card mb-20">
+        <h3 style="margin-bottom:10px;"><i class="bi bi-info-circle-fill" style="color:#38bdf8"></i> Comment ça marche</h3>
+        <ul style="color:var(--text-dim); padding-left:20px; line-height:1.8;">
+          <li>Décris le problème de la manière la plus précise possible.</li>
+          <li>Joins des preuves (capture d'écran, lien) si tu peux.</li>
+          <li>Notre équipe examine sous 48h.</li>
+          <li>Tu reçois une notification quand le dossier évolue.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:10px;"><i class="bi bi-shield-fill-exclamation" style="color:#fbbf24"></i> Charte de modération</h3>
+        <p class="text-dim" style="line-height:1.65;">
+          Modénation tolère zéro arnaque, harcèlement, spam ou usurpation d'identité. 
+          Tout abus entraîne suspension immédiate du compte concerné. Les faux signalements 
+          sont également sanctionnés.
+        </p>
+        <a href="mentions.html#cgu" class="btn btn-secondary mt-14"><i class="bi bi-file-earmark-text"></i> Lire la charte complète</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: nouveau signalement -->
+<div class="modal-overlay" id="report">
+  <div class="modal">
+    <h3><i class="bi bi-flag-fill" style="color:#f87171"></i> Nouveau signalement</h3>
+    <p class="sub">Tout signalement est anonyme et traité sous 48h.</p>
+    <form data-fake="Signalement #1291 créé. Merci !" data-close-modal="report" data-reset="true">
+      <div class="form-group">
+        <label>Type</label>
+        <select class="select"><option>Comportement inapproprié</option><option>Arnaque / offre suspecte</option><option>Faux profil</option><option>Harcèlement</option><option>Autre</option></select>
+      </div>
+      <div class="form-group"><label>Cible (pseudo, ID offre, lien)</label><input class="input" placeholder="@username"></div>
+      <div class="form-group"><label>Description</label><textarea class="textarea" required></textarea></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('report')">Annuler</button>
+        <button type="submit" class="btn btn-danger">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer style="margin-top:60px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Fonctionnalités</h4><a href="moderateurs.html">Modérateurs</a><a href="offres.html">Offres</a><a href="dashboard.html">Tableau de bord</a><a href="signalement.html">Signalements</a></div>
+      <div class="footer-col"><h4>À Propos</h4><a href="apropos.html">Équipe</a><a href="apropos.html#mission">Mission</a><a href="blog.html">Blog</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="contact.html#faq">FAQ</a><a href="contact.html#community">Communauté</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a><a href="mentions.html#cgu">CGU</a></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-socials"><a href="#"><i class="bi bi-discord"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-twitch"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
+      <div>© 2026 Modénation. Tous droits réservés.</div>
+      <div class="footer-bottom-links"><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

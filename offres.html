@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Offres de Recrutement — Modénation</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt=""><span>Modénation</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="moderateurs.html">Modérateurs</a>
+      <a href="offres.html" class="active">Offres de Recrutement</a>
+      <a href="dashboard.html">Tableau de Bord</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a href="login.html" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Se Connecter</a>
+  </div>
+</header>
+
+<div class="container page-head" style="display:flex; align-items:end; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+  <div>
+    <h1>Offres de <span style="background:var(--grad-main);-webkit-background-clip:text;background-clip:text;color:transparent;">Recrutement</span></h1>
+    <p class="sub">Trouvez la mission qui correspond à votre profil ou publiez la vôtre.</p>
+  </div>
+  <button class="btn btn-primary btn-lg" onclick="openModal('new-offer')"><i class="bi bi-plus-circle"></i> Publier une offre</button>
+</div>
+
+<div class="container">
+  <div class="filters" data-chip-group>
+    <span class="chip active" data-value="all">Toutes</span>
+    <span class="chip" data-value="discord">Discord</span>
+    <span class="chip" data-value="twitch">Twitch</span>
+    <span class="chip" data-value="youtube">YouTube</span>
+    <span class="chip" data-value="urgent">Urgent</span>
+    <span class="chip" data-value="paid">Rémunéré</span>
+    <span class="chip" data-value="volunteer">Bénévole</span>
+  </div>
+
+  <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+
+    <div class="card hoverable">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+        <div class="offer-icon purple"><i class="bi bi-discord"></i></div>
+        <div style="flex:1;">
+          <div style="font-weight:700; font-size:16px;">Serveur RP Discord</div>
+          <div style="color:var(--text-dim); font-size:13px;">RP Nation · 2 300 membres</div>
+        </div>
+        <span class="badge badge-pending"><i class="bi bi-hourglass-split"></i> En Attente</span>
+      </div>
+      <div style="color:var(--text-dim); font-size:14px; margin-bottom:12px;">
+        Nous cherchons un modérateur RP expérimenté pour gérer notre serveur narratif. Disponibilités le soir.
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+        <span class="badge badge-info">Bénévole</span>
+        <span class="badge badge-info">FR</span>
+        <span class="badge badge-info">10h/semaine</span>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn btn-primary" style="flex:1;" onclick="openModal('apply')"><i class="bi bi-send"></i> Postuler</button>
+        <button class="btn btn-secondary"><i class="bi bi-bookmark"></i></button>
+      </div>
+    </div>
+
+    <div class="card hoverable">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+        <div class="offer-icon blue"><i class="bi bi-twitch"></i></div>
+        <div style="flex:1;">
+          <div style="font-weight:700; font-size:16px;">Chaîne Twitch — StreamWorld</div>
+          <div style="color:var(--text-dim); font-size:13px;">Streamer 15k followers</div>
+        </div>
+        <span class="badge badge-accepted"><i class="bi bi-check-circle"></i> Ouvert</span>
+      </div>
+      <div style="color:var(--text-dim); font-size:14px; margin-bottom:12px;">
+        Modérateur live recherché pour streams quotidiens. Expérience requise avec Nightbot &amp; StreamElements.
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+        <span class="badge badge-accepted">Rémunéré</span>
+        <span class="badge badge-info">Soirs &amp; WE</span>
+        <span class="badge badge-info">FR/EN</span>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn btn-primary" style="flex:1;" onclick="openModal('apply')"><i class="bi bi-send"></i> Postuler</button>
+        <button class="btn btn-secondary"><i class="bi bi-bookmark"></i></button>
+      </div>
+    </div>
+
+    <div class="card hoverable">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+        <div class="offer-icon red"><i class="bi bi-youtube"></i></div>
+        <div style="flex:1;">
+          <div style="font-weight:700; font-size:16px;">Team YouTube — TechTalk</div>
+          <div style="color:var(--text-dim); font-size:13px;">450k abonnés</div>
+        </div>
+        <span class="badge badge-refused"><i class="bi bi-fire"></i> Urgent</span>
+      </div>
+      <div style="color:var(--text-dim); font-size:14px; margin-bottom:12px;">
+        Modération des commentaires sur 3-5 vidéos par semaine. Filtrage spam, modération constructive.
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+        <span class="badge badge-accepted">Rémunéré</span>
+        <span class="badge badge-info">Flexible</span>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn btn-primary" style="flex:1;" onclick="openModal('apply')"><i class="bi bi-send"></i> Postuler</button>
+        <button class="btn btn-secondary"><i class="bi bi-bookmark"></i></button>
+      </div>
+    </div>
+
+    <div class="card hoverable">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+        <div class="offer-icon" style="background:linear-gradient(135deg,#f97316,#fbbf24);"><i class="bi bi-controller"></i></div>
+        <div style="flex:1;">
+          <div style="font-weight:700; font-size:16px;">GamingZone Community</div>
+          <div style="color:var(--text-dim); font-size:13px;">Discord gaming · 1 500 membres</div>
+        </div>
+        <span class="badge badge-accepted"><i class="bi bi-check-circle"></i> Ouvert</span>
+      </div>
+      <div style="color:var(--text-dim); font-size:14px; margin-bottom:12px;">
+        Équipe de mods en croissance, ambiance fun. Pratique des bots type MEE6, Carl-bot appréciée.
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+        <span class="badge badge-info">Bénévole</span>
+        <span class="badge badge-info">5h/semaine</span>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn btn-primary" style="flex:1;" onclick="openModal('apply')"><i class="bi bi-send"></i> Postuler</button>
+        <button class="btn btn-secondary"><i class="bi bi-bookmark"></i></button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal: postuler -->
+<div class="modal-overlay" id="apply">
+  <div class="modal">
+    <h3>Postuler à cette offre</h3>
+    <p class="sub">Envoie un message personnalisé au recruteur. Sois clair sur ton expérience.</p>
+    <form data-fake="Candidature envoyée !" data-close-modal="apply" data-reset="true">
+      <div class="form-group">
+        <label>Message au recruteur</label>
+        <textarea class="textarea" placeholder="Bonjour, je suis intéressé par votre offre..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Disponibilité</label>
+        <select class="select">
+          <option>Immédiate</option>
+          <option>Sous 1 semaine</option>
+          <option>Sous 1 mois</option>
+        </select>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('apply')">Annuler</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Envoyer ma candidature</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal: nouvelle offre -->
+<div class="modal-overlay" id="new-offer">
+  <div class="modal">
+    <h3>Publier une offre de recrutement</h3>
+    <p class="sub">Décrivez votre besoin pour attirer les meilleurs profils.</p>
+    <form data-fake="Offre publiée avec succès !" data-close-modal="new-offer" data-reset="true">
+      <div class="form-group">
+        <label>Titre de l'offre</label>
+        <input class="input" placeholder="Ex: Modérateur Discord pour serveur gaming" required>
+      </div>
+      <div class="form-group">
+        <label>Plateforme</label>
+        <select class="select">
+          <option>Discord</option><option>Twitch</option><option>YouTube</option><option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="textarea" placeholder="Détaillez vos attentes, horaires, langues..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Type</label>
+        <select class="select"><option>Bénévole</option><option>Rémunéré</option></select>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('new-offer')">Annuler</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Publier</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer style="margin-top:60px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Fonctionnalités</h4><a href="moderateurs.html">Modérateurs</a><a href="offres.html">Offres</a><a href="dashboard.html">Tableau de bord</a><a href="signalement.html">Signalements</a></div>
+      <div class="footer-col"><h4>À Propos</h4><a href="apropos.html">Équipe</a><a href="apropos.html#mission">Mission</a><a href="blog.html">Blog</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="contact.html#faq">FAQ</a><a href="contact.html#community">Communauté</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a><a href="mentions.html#cgu">CGU</a></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-socials"><a href="#"><i class="bi bi-discord"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-twitch"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
+      <div>© 2026 Modénation. Tous droits réservés.</div>
+      <div class="footer-bottom-links"><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

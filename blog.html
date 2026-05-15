@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — Modénation</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt=""><span>Modénation</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="moderateurs.html">Modérateurs</a>
+      <a href="offres.html">Offres de Recrutement</a>
+      <a href="dashboard.html">Tableau de Bord</a>
+      <a href="blog.html" class="active">Blog</a>
+    </nav>
+    <a href="login.html" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Se Connecter</a>
+  </div>
+</header>
+
+<div class="container page-head">
+  <h1>Le <span style="background:var(--grad-main);-webkit-background-clip:text;background-clip:text;color:transparent;">Blog</span> Modénation</h1>
+  <p class="sub">Conseils, retours d'expérience, et actualités pour les modérateurs et les recruteurs.</p>
+</div>
+
+<div class="container">
+  <div class="filters" data-chip-group>
+    <span class="chip active" data-value="all">Tous</span>
+    <span class="chip" data-value="guide">Guides</span>
+    <span class="chip" data-value="experience">Témoignages</span>
+    <span class="chip" data-value="actu">Actualités</span>
+    <span class="chip" data-value="tools">Outils</span>
+  </div>
+
+  <div class="blog-grid">
+
+    <article class="card blog-card">
+      <div class="blog-thumb"><i class="bi bi-shield-check"></i></div>
+      <div class="blog-body">
+        <div class="blog-tag">Guide</div>
+        <div class="blog-title">10 règles d'or pour modérer un Discord en 2026</div>
+        <div class="text-dim" style="font-size:13px;">Les fondations à poser dès le premier jour pour éviter les drama et fidéliser la communauté.</div>
+        <div class="blog-meta"><i class="bi bi-calendar3"></i> 12 Mai 2026 · <i class="bi bi-clock"></i> 6 min</div>
+      </div>
+    </article>
+
+    <article class="card blog-card">
+      <div class="blog-thumb b"><i class="bi bi-broadcast"></i></div>
+      <div class="blog-body">
+        <div class="blog-tag">Témoignage</div>
+        <div class="blog-title">De viewer à head-mod : mon parcours sur Twitch</div>
+        <div class="text-dim" style="font-size:13px;">LunaStreams raconte comment elle est devenue indispensable à un stream de 50k followers.</div>
+        <div class="blog-meta"><i class="bi bi-calendar3"></i> 9 Mai 2026 · <i class="bi bi-clock"></i> 4 min</div>
+      </div>
+    </article>
+
+    <article class="card blog-card">
+      <div class="blog-thumb c"><i class="bi bi-robot"></i></div>
+      <div class="blog-body">
+        <div class="blog-tag">Outils</div>
+        <div class="blog-title">Top 7 bots Discord pour automatiser ta modération</div>
+        <div class="text-dim" style="font-size:13px;">MEE6, Carl-bot, Wick, Dyno… on compare les vrais utiles pour 2026.</div>
+        <div class="blog-meta"><i class="bi bi-calendar3"></i> 5 Mai 2026 · <i class="bi bi-clock"></i> 8 min</div>
+      </div>
+    </article>
+
+    <article class="card blog-card">
+      <div class="blog-thumb d"><i class="bi bi-people"></i></div>
+      <div class="blog-body">
+        <div class="blog-tag">Guide</div>
+        <div class="blog-title">Comment recruter le bon modérateur en 5 étapes</div>
+        <div class="text-dim" style="font-size:13px;">La checklist anti-galère pour ne plus tomber sur des profils fantômes.</div>
+        <div class="blog-meta"><i class="bi bi-calendar3"></i> 28 Avr 2026 · <i class="bi bi-clock"></i> 7 min</div>
+      </div>
+    </article>
+
+    <article class="card blog-card">
+      <div class="blog-thumb e"><i class="bi bi-fire"></i></div>
+      <div class="blog-body">
+        <div class="blog-tag">Actualité</div>
+        <div class="blog-title">Discord change ses règles : ce que ça veut dire pour les mods</div>
+        <div class="text-dim" style="font-size:13px;">Analyse des nouvelles guidelines et impact concret sur ton travail au quotidien.</div>
+        <div class="blog-meta"><i class="bi bi-calendar3"></i> 22 Avr 2026 · <i class="bi bi-clock"></i> 5 min</div>
+      </div>
+    </article>
+
+    <article class="card blog-card">
+      <div class="blog-thumb f"><i class="bi bi-emoji-smile"></i></div>
+      <div class="blog-body">
+        <div class="blog-tag">Témoignage</div>
+        <div class="blog-title">Gérer un troll : étude de cas réelle (et solutions)</div>
+        <div class="text-dim" style="font-size:13px;">ShadowWolf décortique la gestion d'un raid coordonné sur un serveur de 10k membres.</div>
+        <div class="blog-meta"><i class="bi bi-calendar3"></i> 15 Avr 2026 · <i class="bi bi-clock"></i> 9 min</div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="center mt-30">
+    <button class="btn btn-secondary"><i class="bi bi-arrow-down-circle"></i> Voir plus d'articles</button>
+  </div>
+</div>
+
+<footer style="margin-top:60px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Fonctionnalités</h4><a href="moderateurs.html">Modérateurs</a><a href="offres.html">Offres</a><a href="dashboard.html">Tableau de bord</a><a href="signalement.html">Signalements</a></div>
+      <div class="footer-col"><h4>À Propos</h4><a href="apropos.html">Équipe</a><a href="apropos.html#mission">Mission</a><a href="blog.html">Blog</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="contact.html#faq">FAQ</a><a href="contact.html#community">Communauté</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a><a href="mentions.html#cgu">CGU</a></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-socials"><a href="#"><i class="bi bi-discord"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-twitch"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
+      <div>© 2026 Modénation. Tous droits réservés.</div>
+      <div class="footer-bottom-links"><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

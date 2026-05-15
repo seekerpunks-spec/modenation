@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mentions légales — Modénation</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .legal h2 { font-size:20px; margin: 24px 0 10px; }
+  .legal h3 { font-size:16px; margin: 18px 0 8px; color:var(--accent); }
+  .legal p, .legal li { color: var(--text-dim); line-height:1.7; }
+  .legal ul { padding-left: 22px; }
+  .toc a { display:block; padding:8px 12px; border-radius:8px; color:var(--text-dim); font-size:14px; }
+  .toc a:hover { background: rgba(255,255,255,.04); color: var(--text); }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt=""><span>Modénation</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="moderateurs.html">Modérateurs</a>
+      <a href="offres.html">Offres de Recrutement</a>
+      <a href="dashboard.html">Tableau de Bord</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a href="login.html" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Se Connecter</a>
+  </div>
+</header>
+
+<div class="container page-head">
+  <h1>Mentions <span style="background:var(--grad-main);-webkit-background-clip:text;background-clip:text;color:transparent;">Légales</span></h1>
+  <p class="sub">Tout ce qu'il faut savoir sur l'utilisation de Modénation.</p>
+</div>
+
+<div class="container" style="display:grid; grid-template-columns: 260px 1fr; gap: 22px;">
+  <aside class="card toc" style="height:fit-content; position:sticky; top: 90px;">
+    <a href="#mentions">Mentions légales</a>
+    <a href="#cgu">CGU</a>
+    <a href="#confidentialite">Confidentialité</a>
+    <a href="#cookies">Cookies</a>
+  </aside>
+
+  <article class="card legal">
+    <section id="mentions">
+      <h2>1. Mentions légales</h2>
+      <p><strong>Éditeur :</strong> Modénation SAS — 12 rue des Communautés, 75001 Paris.<br>
+      <strong>Directeur de publication :</strong> Amine M.<br>
+      <strong>Hébergeur :</strong> OVH, 2 rue Kellermann, 59100 Roubaix.<br>
+      <strong>Contact :</strong> contact@modenation.fr</p>
+    </section>
+
+    <section id="cgu">
+      <h2>2. Conditions Générales d'Utilisation</h2>
+      <h3>2.1 Objet</h3>
+      <p>Modénation est une plateforme mettant en relation des modérateurs et des recruteurs de communautés en ligne (Discord, Twitch, YouTube et autres).</p>
+      <h3>2.2 Compte utilisateur</h3>
+      <p>L'inscription est gratuite. L'utilisateur s'engage à fournir des informations exactes et à respecter la charte de modération.</p>
+      <h3>2.3 Comportements interdits</h3>
+      <ul>
+        <li>Création de faux profils</li>
+        <li>Arnaque, harcèlement, propos haineux</li>
+        <li>Publication d'offres frauduleuses</li>
+        <li>Détournement du système de signalements</li>
+      </ul>
+      <p>Tout manquement entraîne suspension immédiate du compte.</p>
+    </section>
+
+    <section id="confidentialite">
+      <h2>3. Politique de confidentialité</h2>
+      <p>Conformément au RGPD, Modénation collecte uniquement les données strictement nécessaires : email, pseudo, comptes liés (Discord/Twitch/YouTube), historique d'activité.</p>
+      <h3>3.1 Vos droits</h3>
+      <p>Vous pouvez à tout moment demander la consultation, la modification ou la suppression de vos données via <a href="contact.html" style="color:var(--accent);">contact@modenation.fr</a>.</p>
+      <h3>3.2 Données partagées</h3>
+      <p>Aucune donnée n'est revendue. Les données sont stockées sur des serveurs européens (OVH).</p>
+    </section>
+
+    <section id="cookies">
+      <h2>4. Cookies</h2>
+      <p>Modénation utilise uniquement des cookies fonctionnels (session, préférences). Aucun cookie publicitaire tiers.</p>
+    </section>
+  </article>
+</div>
+
+<footer style="margin-top:60px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Fonctionnalités</h4><a href="moderateurs.html">Modérateurs</a><a href="offres.html">Offres</a><a href="dashboard.html">Tableau de bord</a><a href="signalement.html">Signalements</a></div>
+      <div class="footer-col"><h4>À Propos</h4><a href="apropos.html">Équipe</a><a href="apropos.html#mission">Mission</a><a href="blog.html">Blog</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="contact.html#faq">FAQ</a><a href="contact.html#community">Communauté</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a><a href="mentions.html#cgu">CGU</a></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-socials"><a href="#"><i class="bi bi-discord"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-twitch"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
+      <div>© 2026 Modénation. Tous droits réservés.</div>
+      <div class="footer-bottom-links"><a href="mentions.html">Mentions Légales</a><a href="mentions.html#confidentialite">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
