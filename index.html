@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="assets/images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -36,29 +36,34 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <h1>Trouvez le <span class="ideal">modérateur idéal</span><br>pour votre communauté !</h1>
+      <div class="hero-tag">SYS_ONLINE · NIGHT.CITY/MODERATORS</div>
+      <h1>Trouvez le <span class="ideal" data-text="modérateur idéal">modérateur idéal</span><br>pour votre communauté !</h1>
+      <p class="subtitle">Système de recrutement next-gen pour modérateurs Discord, Twitch &amp; YouTube. Connexion sécurisée, XP cryptés, réputation on-chain.</p>
       <div class="hero-ctas">
         <a href="moderateurs.html" class="btn btn-cyan btn-lg">
-          <i class="bi bi-search"></i> Chercher un Modérateur
+          <i class="bi bi-search"></i> SCAN MODERATORS
         </a>
         <a href="login.html?role=mod" class="btn btn-dark btn-lg">
-          <span class="star-grad"><i class="bi bi-star-fill"></i></span> Devenir Modérateur
+          <span class="star-grad"><i class="bi bi-lightning-charge-fill"></i></span> JOIN_THE_NET
         </a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
-          <i class="bi bi-archive-fill ic"></i>
-          <span><b>1,200+</b> Modérateurs</span>
+          <i class="bi bi-shield-fill-check ic"></i>
+          <span><b>1,200+</b> Opérateurs</span>
         </div>
         <div class="hero-stat">
-          <i class="bi bi-people-fill ic"></i>
-          <span><b>850+</b> Recruteurs</span>
+          <i class="bi bi-broadcast ic"></i>
+          <span><b>850+</b> Corporations</span>
         </div>
       </div>
     </div>
 
     <div class="hero-visual">
-      <!-- Top right: Top Modérateur -->
+      <div class="corner tl"></div>
+      <div class="corner tr"></div>
+      <div class="corner bl"></div>
+      <div class="corner br"></div>
       <div class="float-card tl">
         <div class="label"><i class="bi bi-star-fill ic" style="color:#facc15"></i> Top Modérateur</div>
         <div class="row">
@@ -97,8 +102,8 @@
     <!-- Modérateurs Populaires -->
     <div class="card">
       <div class="card-head">
-        <h3><i class="bi bi-star-fill ic"></i> Modérateurs Populaires</h3>
-        <a href="moderateurs.html" class="link">Voir Tous <i class="bi bi-chevron-right"></i></a>
+        <h3><i class="bi bi-star-fill ic"></i> TOP_OPERATORS</h3>
+        <a href="moderateurs.html" class="link">VIEW_ALL <i class="bi bi-chevron-right"></i></a>
       </div>
 
       <a href="profil.html?u=shadowwolf" class="mod-row">
@@ -109,7 +114,7 @@
           <div class="mod-spec"><span class="dot"><i class="bi bi-shield-check"></i></span> Expert en gestion</div>
         </div>
         <div class="mod-meta">
-          <span class="badge badge-online"><span class="ondot"></span> En Ligne</span>
+          <span class="badge badge-online"><span class="ondot"></span> ONLINE</span>
           <span class="stars">★ ★ ★ ★ ★</span>
           <span class="heart"><i class="bi bi-heart-fill"></i> 4.9</span>
         </div>
@@ -123,7 +128,7 @@
           <div class="mod-spec"><span class="dot"><i class="bi bi-bug-fill"></i></span> Spécialiste Anti-Spam</div>
         </div>
         <div class="mod-meta">
-          <span class="badge badge-verified"><i class="bi bi-patch-check"></i> Vérifié</span>
+          <span class="badge badge-verified"><i class="bi bi-patch-check"></i> VERIFIED</span>
           <span class="stars">★ ★ ★ ★ ★</span>
           <span class="heart"><i class="bi bi-heart-fill"></i> 4.7</span>
         </div>
@@ -137,7 +142,7 @@
           <div class="mod-spec"><span class="dot"><i class="bi bi-robot"></i></span> Pro des Bots</div>
         </div>
         <div class="mod-meta">
-          <span class="badge badge-level"><i class="bi bi-trophy-fill"></i> Niveau 8</span>
+          <span class="badge badge-level"><i class="bi bi-trophy-fill"></i> LVL.08</span>
           <span class="stars">★ ★ ★ ★ ★</span>
           <span class="heart"><i class="bi bi-heart-fill"></i> 4.6</span>
         </div>
@@ -147,8 +152,8 @@
     <!-- Offres de Recrutement -->
     <div class="card">
       <div class="card-head">
-        <h3><i class="bi bi-briefcase-fill ic purple"></i> Offres de Recrutement</h3>
-        <a href="offres.html" class="link">Voir Toutes <i class="bi bi-chevron-right"></i></a>
+        <h3><i class="bi bi-briefcase-fill ic purple"></i> ACTIVE_MISSIONS</h3>
+        <a href="offres.html" class="link">VIEW_ALL <i class="bi bi-chevron-right"></i></a>
       </div>
 
       <div class="offer-row">
@@ -192,15 +197,15 @@
   <div class="container">
     <div class="dashboard-card">
       <div class="card-head">
-        <h3><i class="bi bi-columns-gap ic purple"></i> Tableau de Bord</h3>
-        <a href="dashboard.html" class="link">Voir Toutes <i class="bi bi-chevron-right"></i></a>
+        <h3><i class="bi bi-columns-gap ic purple"></i> CONTROL_PANEL</h3>
+        <a href="dashboard.html" class="link">FULL_ACCESS <i class="bi bi-chevron-right"></i></a>
       </div>
 
       <div class="two-col">
         <!-- Mes Candidatures -->
         <div>
           <div class="dashboard-sub-title">
-            <i class="bi bi-file-earmark-text ic"></i> Mes Candidatures
+            <i class="bi bi-file-earmark-text ic"></i> MY_APPLICATIONS
           </div>
 
           <div class="offer-row">
@@ -227,7 +232,7 @@
         <!-- Candidats Reçus -->
         <div>
           <div class="dashboard-sub-title">
-            <i class="bi bi-people-fill ic"></i> Candidats Reçus
+            <i class="bi bi-people-fill ic"></i> INCOMING_AGENTS
           </div>
 
           <div class="offer-row">
@@ -254,9 +259,9 @@
     <!-- Stats strip -->
     <div class="stats-strip">
       <div class="stat-card">
-        <div class="ic-wrap xp"><i class="bi bi-play-circle-fill"></i></div>
+        <div class="ic-wrap xp"><i class="bi bi-cpu-fill"></i></div>
         <div class="body">
-          <div class="label">XP: 345 <span class="muted">/ 500</span> <span class="muted">Niveau 4</span></div>
+          <div class="label">XP_345 <span class="muted">/ 500</span> <span class="muted">LVL.04</span></div>
           <div class="xp-bar"><span style="width:69%"></span></div>
         </div>
       </div>
@@ -264,14 +269,14 @@
       <div class="stat-card">
         <div class="ic-wrap star"><i class="bi bi-star-fill"></i></div>
         <div class="body">
-          <div class="label">Avis Reçus <span style="margin-left:8px; color:var(--text);">4.8 / 5</span></div>
+          <div class="label">REPUTATION <span style="margin-left:8px; color:var(--neon-yellow); text-shadow:0 0 6px var(--neon-yellow);">4.8 / 5</span></div>
         </div>
       </div>
 
       <div class="stat-card">
-        <div class="ic-wrap flag"><i class="bi bi-flag-fill"></i></div>
+        <div class="ic-wrap flag"><i class="bi bi-exclamation-triangle-fill"></i></div>
         <div class="body">
-          <div class="label">Signalements <span style="margin-left:8px; color:var(--text);">2</span> <span class="muted">EnCours</span></div>
+          <div class="label">ALERTS <span style="margin-left:8px; color:var(--neon-red); text-shadow:0 0 6px var(--neon-red);">02</span> <span class="muted">ACTIVE</span></div>
         </div>
       </div>
     </div>
@@ -325,5 +330,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/animations.js"></script>
+<script src="assets/js/cyberpunk.js"></script>
 </body>
 </html>
